@@ -1,0 +1,24 @@
+[package]
+name = "bluepill-momo"
+description = "A minimal example using USB CDC"
+authors = ["Ted Yin <tederminant@gmail.com>"]
+keywords = ["no-std", "arm", "cortex-m", "stm32"]
+license = "GPL-3.0"
+version = "0.1.0"
+
+[dependencies]
+r0 = "0.2.1"
+
+[dependencies.bluepill-usbcdc]
+version = "0.1.0"
+
+[dependencies.stm32f103xx]
+features = ["rt"]
+version = "0.7.2"
+
+[dependencies.cortex-m-rt]
+features = ["abort-on-panic"]
+
+[profile.release]
+debug = true
+lto = true
